@@ -32,7 +32,7 @@ To fetch user information based on ID number do this;
 
 ```python
 >>> from nida import load_user
->>> user_detail = load(national_id='XXXXXXXXX')
+>>> user_detail = load_user(national_id='XXXXXXXXX')
 >>> print(user_datail)
 user
 {'Nin': 'XXXXXX', 'Firstname': 'XXXXXX', 'Middlename': 'XXXXXX', 'Surname': 'XXXXXX', 'Othernames': 'XXXXXX', 'Sex': 'XXXXXX', 'Dateofbirth': 'XXXXXX', 'Residentregion': 'XXXXXX', 'Residentdistrict': 'XXXXXX', 'Residentward': 'XXXXXX', 'Residentvillage': 'XXXXXX', 'Residentstreet': 'XXXXXX', 'Residentpostcode': 'XXXXXX', 'Permanentregion': 'XXXXXX', 'Permanentdistrict': 'XXXXXX', 'Permanentward': 'XXXXXX', 'Permanentvillage': 'XXXXXX', 'Permanentstreet': 'XXXXXX', 'Birthcountry': 'XXXXXX', 'Birthregion': 'XXXXXX', 'Birthdistrict': 'XXXXXX', 'Birthward': 'XXXXXX', 'Nationality': 'XXXXXX', 'Phonenumber': 'XXXXXX', 'Maritalstatus': 'XXXXXX', 'Occupation': 'XXXXXX', 'Primaryschooleducation': 'XXXXXX', 'Primaryschooldistrict': 'XXXXXX', 'Primaryschoolyear': 'XXXXXX', 'Photo': 'XXXXXX', 'Signature': 'XXXXXX', 'Nationalidnumber': 'XXXXXX', 'Lastname': 'XXXXXX'}
