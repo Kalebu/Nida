@@ -2,10 +2,10 @@ from setuptools import setup
 
 setup(
     name="nida",
-    version="0.1.0",
+    version="0.1.2",
     description="A python libary to Easy fetching user information based on National ID (Tanzania)",
     url="https://github.com/Kalebu/nida",
-    download_url="https://github.com/Kalebu/Nida/archive/0.1.tar.gz",
+    download_url="https://github.com/Kalebu/Nida/archive/0.2.tar.gz",
     author="Jordan Kalebu",
     author_email="isaackeinstein@gmail.com",
     license="MIT",
@@ -17,6 +17,11 @@ setup(
         "python nida"
         "tanzania nida",
         "python-tanzania",
+    ],
+    install_requires=[
+        'addict',
+        'requests',
+        'pillow'
     ],
     include_package_data=True,
     python_requires=">=3.6",
