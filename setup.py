@@ -1,15 +1,15 @@
-from distutils.core import setup
+from setuptools import setup
 
 setup(
-    name="mtaa",
+    name="nida",
     version="0.1.0",
-    description="A package consisting of all Tanzania locations from region to streets in a easy accessible way",
+    description="A python libary to Easy fetching user information based on National ID (Tanzania)",
     url="https://github.com/Kalebu/nida",
-    download_url="https://github.com/Kalebu/nida/archive/0.1.tar.gz",
+    download_url="https://github.com/Kalebu/Nida/archive/0.1.tar.gz",
     author="Jordan Kalebu",
     author_email="isaackeinstein@gmail.com",
     license="MIT",
-    packages=["mtaa"],
+    packages=["nida"],
     keywords=[
         "nida",
         "nida api"

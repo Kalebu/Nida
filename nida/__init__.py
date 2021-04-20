@@ -44,7 +44,7 @@ class Nida(object):
         new_user_data = {}
         for key in user_data.keys():
             capitalized_key = key.capitalize()
-            new_user_data[capitalized_key] = 'XXXXXX'  # user_data[key]
+            new_user_data[capitalized_key] = user_data[key]
         return new_user_data
 
     def preprocess_user_data(self, user_data: dict) -> dict:
