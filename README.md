@@ -3,9 +3,9 @@
 Unofficial package for fetching users information based on National ID Number made by [kalebu](https://github.com/Kalebu/)
 
 [![Releases](https://badgen.net/github/releases/kalebu/nida)](https://github.com/Kalebu/nida)
-<!-- [![Downloads](https://pepy.tech/badge/nida)](https://pepy.tech/project/nida)
+[![Downloads](https://pepy.tech/badge/nida)](https://pepy.tech/project/nida)
 [![Downloads](https://pepy.tech/badge/nida/month)](https://pepy.tech/project/nida)
-[![Downloads](https://pepy.tech/badge/nida/week)](https://pepy.tech/project/nida) -->
+[![Downloads](https://pepy.tech/badge/nida/week)](https://pepy.tech/project/nida)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Installation
