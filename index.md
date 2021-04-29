@@ -1,37 +1,73 @@
-## Welcome to GitHub Pages
+# [Nida](#)
 
-You can use the [editor on GitHub](https://github.com/Kalebu/Nida/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+Unofficial package for fetching users information based on National ID Number made by [kalebu](https://github.com/Kalebu/)
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+## Installation
 
-### Markdown
+You can install it directly or using pip
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+Here how to install directly
 
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+```bash
+git clone https://github.com/Kalebu/Nida
+cd Nida
+Nida -> python setup.y install
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+Here how to install from pip
 
-### Jekyll Themes
+```bash
+pip install nida
+```
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/Kalebu/Nida/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+## Usage
 
-### Support or Contact
+To fetch user information based on ID number do this;
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+```python
+>>> from nida import load_user
+>>> user_detail = load_user(national_id='XXXXXXXXX')
+>>> print(user_datail)
+user
+{'Nin': 'XXXXXX', 'Firstname': 'XXXXXX', 'Middlename': 'XXXXXX', 'Surname': 'XXXXXX', 'Othernames': 'XXXXXX', 'Sex': 'XXXXXX', 'Dateofbirth': 'XXXXXX', 'Residentregion': 'XXXXXX', 'Residentdistrict': 'XXXXXX', 'Residentward': 'XXXXXX', 'Residentvillage': 'XXXXXX', 'Residentstreet': 'XXXXXX', 'Residentpostcode': 'XXXXXX', 'Permanentregion': 'XXXXXX', 'Permanentdistrict': 'XXXXXX', 'Permanentward': 'XXXXXX', 'Permanentvillage': 'XXXXXX', 'Permanentstreet': 'XXXXXX', 'Birthcountry': 'XXXXXX', 'Birthregion': 'XXXXXX', 'Birthdistrict': 'XXXXXX', 'Birthward': 'XXXXXX', 'Nationality': 'XXXXXX', 'Phonenumber': 'XXXXXX', 'Maritalstatus': 'XXXXXX', 'Occupation': 'XXXXXX', 'Primaryschooleducation': 'XXXXXX', 'Primaryschooldistrict': 'XXXXXX', 'Primaryschoolyear': 'XXXXXX', 'Photo': 'XXXXXX', 'Signature': 'XXXXXX', 'Nationalidnumber': 'XXXXXX', 'Lastname': 'XXXXXX'}
+```
+
+You can access user infromation by using keys and attributes just as shown below;
+
+```python
+>>> user_detetail['Firstname']
+'XXXXXX'
+>>> user_detail.get('Middlename')
+'XXXXXX'
+>>> user_detail.Lastname
+'XXXXXX'
+```
+
+National ID Photo and Signature are auto converted into PIL Images and you can easily save save just as shown below;
+
+```python
+>>> user_detail.Photo.save('National_ID.png')
+>>> user_detail.Signature.save('Signature.png')
+```
+
+If you want the data to be in the same from an API without any side effect preprocessing do this instead while loading user;
+
+```python
+>>> user_detail = load_user('xxxxxxxxxx', json = True)
+>>> print(user_detail)
+{
+    ....
+}
+```
+
+## Contributions
+
+If there is anything yould would like to add warmly welcome, Jus fork it 
+
+## Disclaimers
+
+This is not an official package, therefore I'm not responsible for any misinformation or misuse of the package of any kind !!!
+
+## Credits
+
+All the credits to [Kalebu](https://github.com/Kalebu/) and [StackOverflow comment](https://stackoverflow.com/questions/53369396/how-to-integrate-national-identification-authority-nida-api-for-tanzania) from [dbrax](https://stackoverflow.com/users/6131960/emanuel-paul-mnzava)

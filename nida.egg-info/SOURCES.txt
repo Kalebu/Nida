@@ -1,0 +1,8 @@
+README.md
+setup.py
+nida/__init__.py
+nida.egg-info/PKG-INFO
+nida.egg-info/SOURCES.txt
+nida.egg-info/dependency_links.txt
+nida.egg-info/requires.txt
+nida.egg-info/top_level.txt
