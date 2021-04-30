@@ -2,30 +2,6 @@
 
 Unofficial package for fetching users information based on National ID Number made by [kalebu](https://github.com/Kalebu/)
 
-[![Releases](https://badgen.net/github/releases/kalebu/nida)](https://github.com/Kalebu/nida)
-[![Downloads](https://pepy.tech/badge/nida)](https://pepy.tech/project/nida)
-[![Downloads](https://pepy.tech/badge/nida/month)](https://pepy.tech/project/nida)
-[![Downloads](https://pepy.tech/badge/nida/week)](https://pepy.tech/project/nida)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-
-## Installation
-
-You can install it directly or using pip
-
-Here how to install directly
-
-```bash
-git clone https://github.com/Kalebu/Nida
-cd Nida
-Nida -> python setup.y install
-```
-
-Here how to install from pip
-
-```bash
-pip install nida
-```
-
 ## Usage
 
 To fetch user information based on ID number do this;
@@ -65,14 +41,6 @@ If you want the data to be in the same from an API without any side effect prepr
     ....
 }
 ```
-
-## Give it star
-
-Did you find this repository useful to you ? Well then give it a star so as more people can get to know about it; 
-
-## Issues
-
-Are you facing any issue with usage of the package, just raise an issue and I looking to fixing it as soon as I can.
 
 ## Contributions
 
