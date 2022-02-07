@@ -49,7 +49,7 @@ You can access user infromation by using keys and attributes just as shown below
 'XXXXXX'
 ```
 
-National ID Photo and Signature are auto converted into PIL Images and you can easily save save just as shown below;
+National ID Photo and Signature are auto converted into PIL Images and you can easily save just as shown below;
 
 ```python
 >>> user_detail.Photo.save('National_ID.png')
@@ -76,7 +76,7 @@ Are you facing any issue with usage of the package, just raise an issue and I lo
 
 ## Contributions
 
-If there is anything yould would like to add warmly welcome, Jus fork it 
+If there is anything yould would like to add warmly welcome, Just fork it 
 
 ## Disclaimers
 
