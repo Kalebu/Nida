@@ -4,15 +4,15 @@ from setuptools import setup
 # read the contents of your description file
 
 this_directory = path.abspath(path.dirname(__file__))
-with open(path.join(this_directory, 'README.md'), encoding='utf-8') as f:
+with open(path.join(this_directory, "README.md"), encoding="utf-8") as f:
     long_description = f.read()
 
 setup(
     name="nida",
-    version="0.1.5",
+    version="0.1.6",
     description="A python libary to Easy fetching user information based on National ID (Tanzania)",
     long_description=long_description,
-    long_description_content_type='text/markdown',
+    long_description_content_type="text/markdown",
     url="https://github.com/Kalebu/nida",
     download_url="https://github.com/Kalebu/Nida/archive/0.2.tar.gz",
     author="Jordan Kalebu",
@@ -21,17 +21,10 @@ setup(
     packages=["nida"],
     keywords=[
         "nida",
-        "nida api"
-        "nida python package"
-        "python nida"
-        "tanzania nida",
+        "nida api" "nida python package" "python nida" "tanzania nida",
         "python-tanzania",
     ],
-    install_requires=[
-        'addict',
-        'requests',
-        'pillow'
-    ],
+    install_requires=["addict", "requests", "pillow"],
     include_package_data=True,
     python_requires=">=3.6",
     classifiers=[

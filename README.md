@@ -49,6 +49,8 @@ You can access user infromation by using keys and attributes just as shown below
 'XXXXXX'
 ```
 
+## Image and Signature are currently not supported (Depreciated !!)
+
 National ID Photo and Signature are auto converted into PIL Images and you can easily save just as shown below;
 
 ```python
@@ -68,7 +70,7 @@ If you want the data to be in the same from an API without any side effect prepr
 
 ## Give it star
 
-Did you find this repository useful to you ? Well then give it a star so as more people can get to know about it; 
+Did you find this repository useful to you ? Well then give it a star so as more people can get to know about it;
 
 ## Issues
 
@@ -76,7 +78,7 @@ Are you facing any issue with usage of the package, just raise an issue and I lo
 
 ## Contributions
 
-If there is anything yould would like to add warmly welcome, Just fork it 
+If there is anything yould would like to add warmly welcome, Just fork it
 
 ## Disclaimers
 
