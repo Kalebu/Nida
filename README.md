@@ -33,7 +33,7 @@ To fetch user information based on ID number do this;
 ```python
 >>> from nida import load_user
 >>> user_detail = load_user(national_id='XXXXXXXXX')
->>> print(user_datail)
+>>> print(user_detail)
 user
 {'Nin': 'XXXXXX', 'Firstname': 'XXXXXX', 'Middlename': 'XXXXXX', 'Surname': 'XXXXXX', 'Othernames': 'XXXXXX', 'Sex': 'XXXXXX', 'Dateofbirth': 'XXXXXX', 'Residentregion': 'XXXXXX', 'Residentdistrict': 'XXXXXX', 'Residentward': 'XXXXXX', 'Residentvillage': 'XXXXXX', 'Residentstreet': 'XXXXXX', 'Residentpostcode': 'XXXXXX', 'Permanentregion': 'XXXXXX', 'Permanentdistrict': 'XXXXXX', 'Permanentward': 'XXXXXX', 'Permanentvillage': 'XXXXXX', 'Permanentstreet': 'XXXXXX', 'Birthcountry': 'XXXXXX', 'Birthregion': 'XXXXXX', 'Birthdistrict': 'XXXXXX', 'Birthward': 'XXXXXX', 'Nationality': 'XXXXXX', 'Phonenumber': 'XXXXXX', 'Maritalstatus': 'XXXXXX', 'Occupation': 'XXXXXX', 'Primaryschooleducation': 'XXXXXX', 'Primaryschooldistrict': 'XXXXXX', 'Primaryschoolyear': 'XXXXXX', 'Photo': 'XXXXXX', 'Signature': 'XXXXXX', 'Nationalidnumber': 'XXXXXX', 'Lastname': 'XXXXXX'}
 ```
@@ -49,7 +49,7 @@ You can access user infromation by using keys and attributes just as shown below
 'XXXXXX'
 ```
 
-National ID Photo and Signature are auto converted into PIL Images and you can easily save save just as shown below;
+National ID Photo and Signature are auto converted into PIL Images and you can easily save just as shown below;
 
 ```python
 >>> user_detail.Photo.save('National_ID.png')
@@ -76,7 +76,7 @@ Are you facing any issue with usage of the package, just raise an issue and I lo
 
 ## Contributions
 
-If there is anything yould would like to add warmly welcome, Jus fork it 
+If there is anything yould would like to add warmly welcome, Just fork it 
 
 ## Disclaimers
 
