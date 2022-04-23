@@ -1,9 +1,18 @@
+from os import path
 from setuptools import setup
+
+# read the contents of your description file
+
+this_directory = path.abspath(path.dirname(__file__))
+with open(path.join(this_directory, 'README.md'), encoding='utf-8') as f:
+    long_description = f.read()
 
 setup(
     name="nida",
-    version="0.1.2",
+    version="0.1.5",
     description="A python libary to Easy fetching user information based on National ID (Tanzania)",
+    long_description=long_description,
+    long_description_content_type='text/markdown',
     url="https://github.com/Kalebu/nida",
     download_url="https://github.com/Kalebu/Nida/archive/0.2.tar.gz",
     author="Jordan Kalebu",

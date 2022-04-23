@@ -8,20 +8,22 @@ from addict import Dict
 
 class Nida(object):
     def __init__(self):
-        self.BASE_URL = 'https://ors.brela.go.tz/um/load/load_nida/{}'
+        self.BASE_URL = "https://ors.brela.go.tz/um/load/load_nida/{}"
         # self.user_json = {}
 
     @staticmethod
     def get_headers():
         """
-        Construct headers for be used while making requests 
+        Construct headers for be used while making requests
 
         Returns:
             [type]: [description]
         """
         return {
-            'Content-Type': 'application/json',
-            'Content-Length': '0'
+            "Content-Type": "application/json",
+            "Content-Length": "0",
+            "Connection": "keep-alive",
+            "Accept-Encoding": "gzip, deflate, br",
         }
 
     @staticmethod
@@ -35,8 +37,8 @@ class Nida(object):
             return None
 
     def pythonize_images(self, user_data: dict) -> dict:
-        user_data['PHOTO'] = self.bytes_to_img(user_data['PHOTO'])
-        user_data['SIGNATURE'] = self.bytes_to_img(user_data['SIGNATURE'])
+        user_data["PHOTO"] = self.bytes_to_img(user_data["PHOTO"])
+        user_data["SIGNATURE"] = self.bytes_to_img(user_data["SIGNATURE"])
         return user_data
 
     @staticmethod
@@ -48,7 +50,8 @@ class Nida(object):
         return new_user_data
 
     def preprocess_user_data(self, user_data: dict) -> dict:
-        user_data = self.pythonize_images(user_data)
+        if user_data.get("PHOTO") and user_data.get("SIGNATURE"):
+            user_data = self.pythonize_images(user_data)
         user_data = self.capitalize_keys(user_data)
         user_data = Dict(user_data)
         return user_data
@@ -67,18 +70,18 @@ class Nida(object):
     def load_user_information(self, national_id: str):
         try:
             user_information = requests.post(
-                self.BASE_URL.format(national_id),
-                headers=self.get_headers()
+                self.BASE_URL.format(national_id), headers=self.get_headers()
             ).json()
 
-            if user_information['obj'].get('result'):
-                user_data = user_information['obj'].get('result')
+            if user_information["obj"].get("result"):
+                user_data = user_information["obj"].get("result")
                 return user_data
-            if user_information['obj'].get('error'):
+            if user_information["obj"].get("error"):
                 return None
         except (requests.ConnectionError, requests.ConnectTimeout):
             raise ConnectionError(
-                "Can't load user information probably connection issues")
+                "Can't load user information probably connection issues"
+            )
 
 
 sys.modules[__name__] = Nida()
