@@ -2,7 +2,6 @@ import io
 import sys
 import requests
 import base64
-from PIL import Image
 from addict import Dict
 
 
@@ -27,7 +26,9 @@ class Nida(object):
         }
 
     @staticmethod
-    def bytes_to_img(image_str: str) -> Image:
+    def bytes_to_img(image_str: str):
+        from PIL import Image
+        
         try:
             decoded_img = base64.b64decode(image_str)
             image_buffer = io.BytesIO(decoded_img)

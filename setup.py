@@ -9,7 +9,7 @@ with open(path.join(this_directory, "README.md"), encoding="utf-8") as f:
 
 setup(
     name="nida",
-    version="0.1.6",
+    version="0.1.7",
     description="A python libary to Easy fetching user information based on National ID (Tanzania)",
     long_description=long_description,
     long_description_content_type="text/markdown",
@@ -24,7 +24,7 @@ setup(
         "nida api" "nida python package" "python nida" "tanzania nida",
         "python-tanzania",
     ],
-    install_requires=["addict", "requests", "pillow"],
+    install_requires=["addict", "requests"],
     include_package_data=True,
     python_requires=">=3.6",
     classifiers=[
